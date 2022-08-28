@@ -1,12 +1,12 @@
 [org 0x7c00]
 
-mov ah, 0
 mov bx, string
 mov cx, 0
 input:
     cmp cx, 10
     je end_input
     
+    mov ah, 0
     int 0x16
     mov [bx], al
     inc cx
